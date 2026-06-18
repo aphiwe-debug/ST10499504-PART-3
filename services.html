@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms &amp; Services | Swift Bookings — Standard Rooms &amp; Deluxe Suites</title>
+    <meta name="description" content="Explore Swift Bookings' rooms and services. Standard Rooms from R850/night, Deluxe Suites from R1 950/night. Airport shuttle, spa, and more.">
+    <meta name="keywords" content="hotel rooms Durban, Standard Room R850, Deluxe Suite South Africa, airport shuttle KZN, spa hotel Durban, Swift Bookings services">
+    <meta property="og:title" content="Rooms & Services | Swift Bookings">
+    <meta property="og:description" content="Standard Rooms from R850/night. Deluxe Suites from R1 950/night. Airport shuttle, spa & wellness, 24/7 support.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Accordion + search styles -->
+    <style>
+      .search-bar { margin-bottom: 1.5rem; }
+      .search-bar input {
+        width: 100%; max-width: 480px; padding: 0.7rem 1rem;
+        border: 1.5px solid var(--colour-border, #ddd); border-radius: 4px;
+        font-family: var(--font-body); font-size: 0.95rem;
+      }
+      #no-results { display: none; padding: 1rem; color: var(--colour-text-light, #666); font-style: italic; }
+
+      .accordion-header {
+        width: 100%; background: var(--colour-primary, #1F3864); color: #fff;
+        border: none; padding: 0.85rem 1.2rem; text-align: left;
+        font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+        cursor: pointer; border-radius: 4px; margin-bottom: 2px;
+        display: flex; justify-content: space-between; align-items: center;
+        transition: background 0.2s;
+      }
+      .accordion-header:hover, .accordion-header.active { background: var(--colour-secondary, #2E5A9C); }
+      .accordion-header::after { content: '+'; font-size: 1.3rem; }
+      .accordion-header.active::after { content: '\2212'; }
+      .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Swift Bookings Home">Swift Bookings</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navMenu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page banner -->
+        <section>
+            <h1>Our Services</h1>
+            <p>From the moment you book to the moment you check out, we've got you covered. Here's everything included when you stay with Swift Bookings.</p>
+        </section>
+
+        <!-- Search / Filter -->
+        <section>
+            <h2>Find a Service</h2>
+            <div class="search-bar">
+                <label for="service-search" class="sr-only">Search rooms and services</label>
+                <input type="search" id="service-search" placeholder="Search rooms, services, or amenities..." aria-label="Search services">
+            </div>
+            <p id="no-results">No services match your search. Try a different keyword.</p>
+
+            <!-- Room Types -->
+            <h2>Room Types</h2>
+
+            <!-- Standard Room accordion card -->
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">Standard Room — From R850/night</button>
+                <div class="accordion-body">
+                    <img src="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg"
+                         srcset="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg 800w"
+                         sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 560px"
+                         alt="Standard hotel room with queen bed, work desk, flat-screen TV, and en-suite bathroom" loading="lazy">
+                    <h3>Standard Room</h3>
+                    <p>Our Standard Room is designed for guests who want comfort without the extras. Queen-size bed, flat-screen TV, free high-speed Wi-Fi, work desk, air conditioning, and a private bathroom with shower.</p>
+                    <ul>
+                        <li>Queen bed</li>
+                        <li>En-suite bathroom</li>
+                        <li>Free Wi-Fi</li>
+                        <li>Flat-screen TV</li>
+                        <li>Air conditioning</li>
+                        <li>Daily housekeeping</li>
+                    </ul>
+                    <p><strong>Rate:</strong> From R850 per night &nbsp;|&nbsp; <strong>Capacity:</strong> Up to 2 guests</p>
+                    <a href="enquiry.html">Enquire About This Room</a>
+                </div>
+            </article>
+
+            <!-- Deluxe Suite accordion card -->
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">Deluxe Suite — From R1 950/night</button>
+                <div class="accordion-body">
+                    <img src="img/frames-for-your-heart-FqqiAvJejto-unsplash (1).jpg"
+                         srcset="img/frames-for-your-heart-FqqiAvJejto-unsplash (1).jpg 800w"
+                         sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 560px"
+                         alt="Deluxe suite with king bed, separate lounge area, minibar, and private balcony" loading="lazy">
+                    <h3>Deluxe Suite</h3>
+                    <p>The Deluxe Suite is for guests who want space and luxury. King-size bed, separate lounge, minibar, premium bath products, and a private balcony with a view.</p>
+                    <ul>
+                        <li>King bed</li>
+                        <li>Separate lounge area</li>
+                        <li>Private balcony</li>
+                        <li>Minibar (stocked on request)</li>
+                        <li>Premium toiletries</li>
+                        <li>Free Wi-Fi and flat-screen TV</li>
+                        <li>Daily housekeeping and turndown service</li>
+                    </ul>
+                    <p><strong>Rate:</strong> From R1 950 per night &nbsp;|&nbsp; <strong>Capacity:</strong> Up to 2 guests</p>
+                    <a href="enquiry.html">Enquire About This Room</a>
+                </div>
+            </article>
+
+            <!-- Included services -->
+            <h2>Included With Every Stay</h2>
+
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">Express Online Check-in — Free</button>
+                <div class="accordion-body">
+                    <img src="img/proxyclick-visitor-management-system-VnACB-m22es-unsplash.jpg"
+                         alt="Express online check-in on a mobile device tablet at hotel reception" loading="lazy">
+                    <h3>Express Online Check-in</h3>
+                    <p>No need to wait at the front desk. Complete your check-in online up to 24 hours before arrival. Your key card will be ready when you walk in.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">Complimentary Breakfast — Included</button>
+                <div class="accordion-body">
+                    <img src="img/antonio-araujo-DnZiQ0hSk6M-unsplash.jpg"
+                         alt="Full complimentary hotel breakfast with hot and cold options served poolside" loading="lazy">
+                    <h3>Complimentary Breakfast</h3>
+                    <p>A full breakfast is included with every booking. Hot and cold options daily from 06:30 to 10:00, including vegetarian choices.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">24/7 Guest Support — Always Available</button>
+                <div class="accordion-body">
+                    <img src="img/spencer-davis-Lt3EElsqyuQ-unsplash.jpg"
+                         alt="Hotel guest support staff member at the front desk ready to assist" loading="lazy">
+                    <h3>24/7 Guest Support</h3>
+                    <p>Our front desk is staffed around the clock. Whether it's a late-night request or early morning need, someone is always available.</p>
+                </div>
+            </article>
+
+            <!-- Add-on services -->
+            <h2>Additional Services</h2>
+
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">Airport Shuttle — From R350 per trip</button>
+                <div class="accordion-body">
+                    <img src="img/prakash-rao-q1AaspfOgBA-unsplash.jpg"
+                         srcset="img/prakash-rao-q1AaspfOgBA-unsplash.jpg 800w"
+                         sizes="(max-width:600px) 100vw, 560px"
+                         alt="Private airport shuttle bus waiting at King Shaka International Airport terminal" loading="lazy">
+                    <h3>Airport Shuttle Service</h3>
+                    <p>Private shuttle to and from King Shaka International and OR Tambo International airports. Bookable for arrival, departure, or both.</p>
+                    <ul>
+                        <li>Private vehicle — not shared with other guests</li>
+                        <li>Professional, licensed driver</li>
+                        <li>Available 24 hours a day</li>
+                        <li>Child seat available on request</li>
+                    </ul>
+                    <p><strong>Rate:</strong> From R350 per trip (one way)</p>
+                    <a href="enquiry.html">Book a Shuttle</a>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <button class="accordion-header" aria-expanded="false">Spa &amp; Wellness Centre — From R450 per session</button>
+                <div class="accordion-body">
+                    <img src="img/the-anam-X1s5YSBw8lU-unsplash.jpg"
+                         srcset="img/the-anam-X1s5YSBw8lU-unsplash.jpg 800w"
+                         sizes="(max-width:600px) 100vw, 560px"
+                         alt="Spa and wellness treatment room with candles, fresh towels, and relaxing ambience" loading="lazy">
+                    <h3>Spa &amp; Wellness Centre</h3>
+                    <p>Our on-site spa offers treatments to help you unwind. From deep tissue massages to facials and body wraps.</p>
+                    <ul>
+                        <li>Swedish and deep tissue massage</li>
+                        <li>Facial treatments</li>
+                        <li>Body scrubs and wraps</li>
+                        <li>Couples treatments available</li>
+                        <li>Sauna and steam room access</li>
+                    </ul>
+                    <p><strong>From:</strong> R450 per session &nbsp;|&nbsp; <strong>Hours:</strong> 08:00 – 20:00 daily</p>
+                    <a href="enquiry.html">Book a Spa Treatment</a>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Swift Bookings. All rights reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

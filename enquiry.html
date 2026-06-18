@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room | Enquiry Form — Swift Bookings</title>
+    <meta name="description" content="Submit a booking enquiry with Swift Bookings. Choose your room, dates, and add-on services. We'll confirm availability within 24 hours.">
+    <meta name="keywords" content="book hotel room South Africa, hotel enquiry form, Swift Bookings reservation, Durban hotel booking, Standard Room, Deluxe Suite">
+    <meta property="og:title" content="Book a Room | Swift Bookings">
+    <meta property="og:description" content="Fill in our booking enquiry form. Standard Rooms from R850, Deluxe Suites from R1 950. We respond within 24 hours.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Form validation + response styles -->
+    <style>
+      .input-error { border-color: #c0392b !important; box-shadow: 0 0 0 3px rgba(192,57,43,0.15) !important; }
+      .input-ok    { border-color: #27ae60 !important; }
+      .field-error { display: none; color: #c0392b; font-size: 0.8rem; margin-top: 0.25rem; }
+
+      #enquiry-response { display: none; }
+      .response-card {
+        background: #fff; border-radius: 10px; padding: 2rem; max-width: 600px;
+        box-shadow: 0 4px 20px rgba(31,56,100,0.12);
+      }
+      .response-icon { font-size: 3rem; color: #27ae60; text-align: center; margin-bottom: 1rem; }
+      .response-card h2 { text-align: center; margin-bottom: 0.5rem; }
+      .response-details { border: 1px solid #eee; border-radius: 6px; overflow: hidden; margin: 1.5rem 0; }
+      .response-row { display: flex; justify-content: space-between; padding: 0.6rem 1rem; font-size: 0.9rem; border-bottom: 1px solid #eee; }
+      .response-row:last-child { border-bottom: none; }
+      .response-row.total { background: #f5f9ff; font-size: 1rem; }
+      .response-note { font-size: 0.85rem; color: #666; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Swift Bookings Home">Swift Bookings</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navMenu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page banner -->
+        <section>
+            <h1>Make an Enquiry</h1>
+            <p>Interested in booking a room or one of our add-on services? Fill in the form below and we'll get back to you with availability, pricing, and anything else you need to know.</p>
+        </section>
+
+        <!-- Booking enquiry form -->
+        <section>
+            <h2>Booking Enquiry Form</h2>
+
+            <!-- Confirmation response panel (shown after successful submission) -->
+            <div id="enquiry-response" role="alert" aria-live="polite"></div>
+
+            <form id="enquiry-form" action="#" method="POST" novalidate>
+
+                <!-- Guest personal details -->
+                <fieldset>
+                    <legend>Your Details</legend>
+
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="e.g. Thabo" required autocomplete="given-name">
+                    <span class="field-error" id="first-name-error" role="alert"></span>
+
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="e.g. Nkosi" required autocomplete="family-name">
+                    <span class="field-error" id="last-name-error" role="alert"></span>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. thabo@email.com" required autocomplete="email">
+                    <span class="field-error" id="email-error" role="alert"></span>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 071 234 5678" required autocomplete="tel">
+                    <span class="field-error" id="phone-error" role="alert"></span>
+                </fieldset>
+
+                <!-- Booking details -->
+                <fieldset>
+                    <legend>Booking Details</legend>
+
+                    <label for="room-type">Room Type</label>
+                    <select id="room-type" name="room_type" required>
+                        <option value="">-- Select a Room --</option>
+                        <option value="standard">Standard Room (from R850/night)</option>
+                        <option value="deluxe">Deluxe Suite (from R1 950/night)</option>
+                    </select>
+                    <span class="field-error" id="room-type-error" role="alert"></span>
+
+                    <label for="check-in">Check-in Date</label>
+                    <input type="date" id="check-in" name="check_in" required>
+                    <span class="field-error" id="check-in-error" role="alert"></span>
+
+                    <label for="check-out">Check-out Date</label>
+                    <input type="date" id="check-out" name="check_out" required>
+                    <span class="field-error" id="check-out-error" role="alert"></span>
+
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">-- Select --</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                    </select>
+                    <span class="field-error" id="guests-error" role="alert"></span>
+                </fieldset>
+
+                <!-- Optional add-on services -->
+                <fieldset>
+                    <legend>Add-on Services (Optional)</legend>
+                    <p>Let us know if you'd like any of the following:</p>
+                    <input type="checkbox" id="shuttle" name="services" value="airport_shuttle">
+                    <label for="shuttle">Airport Shuttle (from R350 per trip)</label>
+                    <br>
+                    <input type="checkbox" id="spa" name="services" value="spa">
+                    <label for="spa">Spa &amp; Wellness Treatment (from R450 per session)</label>
+                </fieldset>
+
+                <!-- Special requests -->
+                <fieldset>
+                    <legend>Anything Else?</legend>
+                    <label for="special-requests">Special Requests or Questions</label>
+                    <textarea id="special-requests" name="special_requests" rows="5" placeholder="e.g. early check-in, ground floor room, dietary requirements for breakfast"></textarea>
+                </fieldset>
+
+                <button type="submit">Send Enquiry</button>
+
+            </form>
+        </section>
+
+        <!-- What happens next -->
+        <section>
+            <h2>What Happens After You Submit?</h2>
+            <p>Once we receive your enquiry, a member of our reservations team will review your request and respond within 24 hours with confirmed availability and a final price. We'll email you at the address you provided.</p>
+            <p>If your dates are available, we'll send you a booking confirmation link to secure the reservation. No payment is taken through this form.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Swift Bookings. All rights reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

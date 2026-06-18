@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Swift Bookings — Southern Africa's Trusted Hotel Platform</title>
+    <meta name="description" content="Learn about Swift Bookings — founded in 2019 in Durban, South Africa. Meet our team and discover our mission to make hotel booking stress-free.">
+    <meta name="keywords" content="Swift Bookings about, hotel booking company Durban, South Africa hotel platform team">
+    <meta property="og:title" content="About Us | Swift Bookings">
+    <meta property="og:description" content="Founded in 2019 in Durban. Swift Bookings connects travellers with vetted hotel partners across Southern Africa.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Tab and accordion component styles -->
+    <style>
+      .tabs { margin-bottom: 1.5rem; }
+      .tab-list { display: flex; gap: 0.5rem; border-bottom: 2px solid var(--colour-border, #ddd); margin-bottom: 1.5rem; flex-wrap: wrap; }
+      .tab-btn {
+        background: none; border: none; padding: 0.6rem 1.2rem;
+        font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
+        color: var(--colour-text-light, #666); cursor: pointer;
+        border-bottom: 3px solid transparent; margin-bottom: -2px;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .tab-btn.active, .tab-btn:hover { color: var(--colour-primary, #1F3864); border-bottom-color: var(--colour-accent, #C9A84C); }
+      .tab-panel { display: none; }
+      .tab-panel.active { display: block; }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Swift Bookings Home">Swift Bookings</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navMenu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page banner -->
+        <section>
+            <h1>About Swift Bookings</h1>
+            <p>We started Swift Bookings because booking a hotel room was more stressful than it needed to be. Too many tabs, too much back-and-forth, and too many surprises at check-in. We wanted to fix that.</p>
+        </section>
+
+        <!-- Company history -->
+        <section>
+            <h2>Our Story</h2>
+            <p>Swift Bookings was founded in 2019 in Durban, South Africa, by a team of hospitality and tech professionals who believed that booking a hotel should feel as good as the stay itself. What started as a small platform connecting guests with local hotels has grown into a trusted booking service used by thousands of travellers across Southern Africa.</p>
+            <p>We've worked hard to build relationships with hotel partners who share our standards — clean rooms, honest pricing, and staff who actually care.</p>
+        </section>
+
+        <!-- Mission and Vision -->
+        <section>
+            <h2>Our Mission &amp; Vision</h2>
+            <p><strong>Mission:</strong> To make hotel booking straightforward, transparent, and stress-free for every guest, every time.</p>
+            <p><strong>Vision:</strong> To become Southern Africa's most trusted hotel booking platform, built on the foundation of honest service and real guest experiences.</p>
+        </section>
+
+        <!-- Tabbed section: Team + Why Choose Us -->
+        <section>
+            <h2>The Team &amp; Why Choose Us</h2>
+            <div class="tabs">
+                <div class="tab-list" role="tablist">
+                    <button class="tab-btn" role="tab" aria-selected="false" data-target="tab-team">Meet the Team</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-target="tab-why">Why Choose Us</button>
+                </div>
+
+                <!-- Tab panel: Team -->
+                <div id="tab-team" class="tab-panel" role="tabpanel">
+                    <article>
+                        <h3>Naledi Dlamini — General Manager</h3>
+                        <p>Naledi has over 12 years in the hospitality industry. She oversees daily operations and makes sure every guest interaction reflects the Swift Bookings standard.</p>
+                    </article>
+                    <article>
+                        <h3>Sipho Khumalo — Head of Guest Services</h3>
+                        <p>Sipho is the reason guests come back. He leads our front desk and support team, and he takes feedback seriously. If something isn't right, Sipho wants to know about it.</p>
+                    </article>
+                    <article>
+                        <h3>Ayanda Mokoena — Reservations Manager</h3>
+                        <p>Ayanda manages all bookings and coordinates with our hotel partners. She's the one making sure your room is ready when you arrive.</p>
+                    </article>
+                </div>
+
+                <!-- Tab panel: Why Choose Us -->
+                <div id="tab-why" class="tab-panel" role="tabpanel">
+                    <ul>
+                        <li>No hidden fees — the price you see is the price you pay</li>
+                        <li>Real-time room availability</li>
+                        <li>Flexible cancellation on most bookings</li>
+                        <li>Dedicated support team available around the clock</li>
+                        <li>Carefully vetted hotel partners</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Swift Bookings. All rights reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

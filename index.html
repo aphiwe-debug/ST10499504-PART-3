@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Title tag -->
+    <title>Swift Bookings — Hotel Reservations in South Africa | Book Now</title>
+
+    <!-- SEO: Meta description -->
+    <meta name="description" content="Book hotels across South Africa with Swift Bookings. Fast, transparent reservations — no hidden fees. Standard Rooms from R850/night. Durban & Johannesburg.">
+
+    <!-- SEO: Meta keywords -->
+    <meta name="keywords" content="hotel booking South Africa, Durban hotel, KwaZulu-Natal accommodation, Swift Bookings, hotel reservation, Standard Room, Deluxe Suite, airport shuttle Durban">
+
+    <!-- SEO: Open Graph -->
+    <meta property="og:title" content="Swift Bookings — Hotel Reservations in South Africa">
+    <meta property="og:description" content="Fast, transparent hotel reservations across South Africa. No hidden fees. Book your stay today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swiftbookings.netlify.app/">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Slideshow dot indicators style -->
+    <style>
+      .dot-container { text-align: center; padding: 0.75rem 0; background: #1A1A2E; }
+      .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+             background: rgba(255,255,255,0.35); margin: 0 4px; cursor: pointer;
+             transition: background 0.3s; }
+      .dot.active { background: var(--colour-accent, #C9A84C); }
+    </style>
+</head>
+<body>
+
+    <!-- Skip to main content for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Swift Bookings Home">Swift Bookings</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navMenu" role="list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero section -->
+        <section>
+            <h1>Welcome to Swift Bookings</h1>
+            <p>Fast, reliable hotel reservations with just a few clicks. Whether you're travelling for business or leisure, we make sure your stay is sorted before you even pack your bags.</p>
+            <a href="enquiry.html">Book Now</a>
+        </section>
+
+        <!-- Image Slideshow -->
+        <div class="slideshow-container carousalmargin">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/valeriia-bugaiova-_pPHgeHz1uk-unsplash (1).jpg"
+                     srcset="img/valeriia-bugaiova-_pPHgeHz1uk-unsplash (1).jpg 1200w"
+                     sizes="100vw"
+                     alt="Luxury hotel pool at sunset with palm trees and evening lighting">
+                <div class="text">Experience Luxury</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg"
+                     srcset="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg 1200w"
+                     sizes="100vw"
+                     alt="Elegant hotel room with modern decor, queen bed and soft lighting">
+                <div class="text">Comfort &amp; Style</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/oswald-elsaboath-ym_EI-DTS1g-unsplash.jpg"
+                     srcset="img/oswald-elsaboath-ym_EI-DTS1g-unsplash.jpg 1200w"
+                     sizes="100vw"
+                     alt="Grand hotel lobby with chandelier and marble flooring">
+                <div class="text">Southern Africa's Trusted Booking Platform</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)" role="button" aria-label="Previous slide">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)"  role="button" aria-label="Next slide">&#10095;</a>
+        </div>
+        <!-- Dot indicators for slideshow -->
+        <div class="dot-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- Room Types -->
+        <section>
+            <h2>Our Rooms</h2>
+            <p>Every room is designed with comfort in mind. Pick what suits your trip best.</p>
+            <article>
+                <img src="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg"
+                     alt="Standard hotel room with queen bed, flat-screen TV, and en-suite bathroom" loading="lazy">
+                <h3>Standard Room</h3>
+                <p>A clean, comfortable space with everything you need for a good night's rest. Includes a queen bed, flat-screen TV, free Wi-Fi, and an en-suite bathroom.</p>
+                <p><strong>From R850 per night</strong></p>
+                <a href="enquiry.html">Enquire Now</a>
+            </article>
+            <article>
+                <img src="img/frames-for-your-heart-FqqiAvJejto-unsplash (1).jpg"
+                     alt="Deluxe suite with king bed, separate lounge area, and private balcony view" loading="lazy">
+                <h3>Deluxe Suite</h3>
+                <p>Spacious and elegant, the Deluxe Suite gives you a separate lounge area, a king bed, premium toiletries, and a stunning view.</p>
+                <p><strong>From R1 950 per night</strong></p>
+                <a href="enquiry.html">Enquire Now</a>
+            </article>
+        </section>
+
+        <!-- Services overview -->
+        <section>
+            <h2>What We Offer</h2>
+            <article>
+                <img src="img/proxyclick-visitor-management-system-VnACB-m22es-unsplash.jpg"
+                     alt="Hotel self check-in on a mobile device at reception" loading="lazy">
+                <h3>Express Online Check-in</h3>
+                <p>Skip the front desk queue. Check in from your phone before you even arrive.</p>
+            </article>
+            <article>
+                <img src="img/antonio-araujo-DnZiQ0hSk6M-unsplash.jpg"
+                     alt="Full hotel breakfast spread served poolside with fresh fruit and pastries" loading="lazy">
+                <h3>Complimentary Breakfast</h3>
+                <p>Every stay includes a full breakfast served daily from 06:30 to 10:00.</p>
+            </article>
+            <article>
+                <img src="img/prakash-rao-q1AaspfOgBA-unsplash.jpg"
+                     alt="Airport shuttle bus waiting at terminal departure point" loading="lazy">
+                <h3>Airport Shuttle</h3>
+                <p>Private shuttle to and from the airport. Just let us know your flight details when you book.</p>
+            </article>
+            <article>
+                <img src="img/the-anam-X1s5YSBw8lU-unsplash.jpg"
+                     alt="Spa and wellness treatment room with candles, towels, and soft lighting" loading="lazy">
+                <h3>Spa &amp; Wellness Centre</h3>
+                <p>Unwind with a massage or treatment at our in-house spa.</p>
+            </article>
+            <article>
+                <img src="img/spencer-davis-Lt3EElsqyuQ-unsplash.jpg"
+                     alt="Hotel guest support staff member available at front desk 24 hours" loading="lazy">
+                <h3>24/7 Guest Support</h3>
+                <p>Our front desk is always staffed and ready to help, any time of day or night.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Swift Bookings. All rights reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

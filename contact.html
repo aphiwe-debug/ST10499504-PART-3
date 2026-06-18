@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Swift Bookings — Durban &amp; Johannesburg</title>
+    <meta name="description" content="Contact Swift Bookings at our Durban head office or Johannesburg branch. Send us a message and we'll get back to you promptly.">
+    <meta name="keywords" content="contact Swift Bookings, Durban hotel contact, Johannesburg hotel enquiry, swiftbookings.co.za, hotel customer service South Africa">
+    <meta property="og:title" content="Contact Us | Swift Bookings">
+    <meta property="og:description" content="Reach our Durban or Johannesburg office. Open 7 days a week, 06:00–22:00.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Validation + confirmation styles -->
+    <style>
+      .input-error { border-color: #c0392b !important; box-shadow: 0 0 0 3px rgba(192,57,43,0.15) !important; }
+      .input-ok    { border-color: #27ae60 !important; }
+      .field-error { display: none; color: #c0392b; font-size: 0.8rem; margin-top: 0.25rem; }
+
+      /* Get Directions button */
+      .directions-btn {
+        display: inline-block; margin-top: 0.75rem;
+        background: none; border: 2px solid var(--colour-secondary, #2E5A9C);
+        color: var(--colour-secondary, #2E5A9C); font-family: var(--font-body);
+        font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1.2rem;
+        border-radius: 4px; cursor: pointer; transition: all 0.2s;
+      }
+      .directions-btn:hover { background: var(--colour-secondary, #2E5A9C); color: #fff; }
+
+      /* Contact confirmation */
+      #contact-confirmation {
+        display: none; background: #f0faf4; border: 1.5px solid #27ae60;
+        border-radius: 8px; padding: 1.5rem; max-width: 600px; margin-top: 1rem;
+      }
+      #contact-confirmation h3 { color: #1a7a3c; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Swift Bookings Home">Swift Bookings</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navMenu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page banner -->
+        <section>
+            <h1>Contact Us</h1>
+            <p>Got a question that's not about a booking? You're in the right place. Use the form below to send us a general message and we'll get back to you as soon as we can.</p>
+        </section>
+
+        <!-- Office locations with Get Directions buttons -->
+        <section>
+            <h2>Our Locations</h2>
+
+            <!-- Durban head office -->
+            <article>
+                <h3>Durban — Head Office</h3>
+                <address>
+                    14 Marine Parade<br>
+                    Durban Central<br>
+                    KwaZulu-Natal, 4001<br>
+                    South Africa
+                </address>
+                <p>Phone: <a href="tel:+27312345678">031 234 5678</a></p>
+                <p>Email: <a href="mailto:durban@swiftbookings.co.za">durban@swiftbookings.co.za</a></p>
+                <p>Hours: Monday to Sunday, 06:00 – 22:00</p>
+                <!-- Durban Google Maps embed -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.2!2d31.0248!3d-29.8587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDUxJzMxLjMiUyAzMcKwMDEnMjkuMyJF!5e0!3m2!1sen!2sza!4v1"
+                    allowfullscreen="" loading="lazy"
+                    title="Swift Bookings Durban head office location on Google Maps">
+                </iframe>
+                <!-- Get Directions button -->
+                <button class="directions-btn" type="button" aria-label="Get directions to Swift Bookings Durban office">
+                    &#9654; Get Directions
+                </button>
+            </article>
+
+            <!-- Johannesburg branch -->
+            <article>
+                <h3>Johannesburg — Branch</h3>
+                <address>
+                    78 Sandton Drive<br>
+                    Sandton<br>
+                    Gauteng, 2196<br>
+                    South Africa
+                </address>
+                <p>Phone: <a href="tel:+27117654321">011 765 4321</a></p>
+                <p>Email: <a href="mailto:jhb@swiftbookings.co.za">jhb@swiftbookings.co.za</a></p>
+                <p>Hours: Monday to Sunday, 06:00 – 22:00</p>
+                <!-- Johannesburg Google Maps embed -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.5!2d28.0567!3d-26.1076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA2JzI3LjQiUyAyOMKwMDMnMjQuMSJF!5e0!3m2!1sen!2sza!4v1"
+                    allowfullscreen="" loading="lazy"
+                    title="Swift Bookings Johannesburg branch location on Google Maps">
+                </iframe>
+                <!-- Get Directions button -->
+                <button class="directions-btn" type="button" aria-label="Get directions to Swift Bookings Johannesburg branch">
+                    &#9654; Get Directions
+                </button>
+            </article>
+        </section>
+
+        <!-- General contact form -->
+        <section>
+            <h2>Send Us a Message</h2>
+            <p>Use this form for general questions, feedback, or anything that's not a booking request. For room reservations, please use the <a href="enquiry.html">enquiry form</a> instead.</p>
+
+            <!-- Success confirmation (shown after submission) -->
+            <div id="contact-confirmation" role="alert" aria-live="polite">
+                <h3>&#10003; Message sent!</h3>
+                <p>Your email client has opened with your message pre-filled. Please click <strong>Send</strong> in your email app to complete the submission. We'll get back to you as soon as we can.</p>
+            </div>
+
+            <form id="contact-form" action="#" method="POST" novalidate>
+
+                <!-- Sender details -->
+                <fieldset>
+                    <legend>Your Details</legend>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Lungelo Zulu" required autocomplete="name">
+                    <span class="field-error" id="name-error" role="alert"></span>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. lungelo@email.com" required autocomplete="email">
+                    <span class="field-error" id="email-error" role="alert"></span>
+
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 083 456 7890" autocomplete="tel">
+                    <span class="field-error" id="phone-error" role="alert"></span>
+                </fieldset>
+
+                <!-- Message details -->
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- What is this about? --</option>
+                        <option value="general">General Question</option>
+                        <option value="feedback">Feedback About a Stay</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="partnership">Business or Partnership Enquiry</option>
+                        <option value="other">Something Else</option>
+                    </select>
+                    <span class="field-error" id="subject-error" role="alert"></span>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                    <span class="field-error" id="message-error" role="alert"></span>
+                </fieldset>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Swift Bookings. All rights reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
