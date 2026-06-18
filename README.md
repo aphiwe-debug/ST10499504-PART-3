@@ -11,7 +11,7 @@
 | Year | 2026 |
 
 ---
-
+link:  https://aphiwe-debug.github.io/ST10499504-part-3/
 ## Project Overview
 
 Swift Bookings is a fictional hotel booking platform based in South Africa. The website was built as part of the WEDE5020 Portfolio of Evidence (PoE) and covers three development phases: HTML structure (Part 1), CSS styling and responsive design (Part 2), and JavaScript functionality with SEO (Part 3).
